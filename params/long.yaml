@@ -1,0 +1,23 @@
+# Longitudinal PID params:
+
+Hz: 40              # Longitudinal PI frequency
+Delta_s: 0.025      # [m] Distance between points from planner 
+nPlanning: 2000     # Should be the same as in tailored_mpc pkg (minimum points we need from the planner)
+MinVelFinish: 1.0   # Minimum velocity to publish finish flag when laps are completed
+nSearchAhead: 5     # [m] distance ahead where we will look for the closer point to the car
+Radius: 0.2         # [m] Wheel radius 
+Mass: 240           # [kg] Car's mass
+
+Topics:
+  Commands: /AS/C/commands 
+  State: /AS/C/state
+  Planner: /AS/C/trajectory/partial
+  Tro: /AS/C/trajectory/full
+  Velocities: /AS/C/pid/velocity
+  SkiFinish: /AS/C/skidpad/finish
+  AccFinish: /AS/C/acceleration/finish 
+  Finish: /AS/C/finish 
+  ModeParameters: /CTRL/ModeParameters    
+
+DebugFilePath: $(find long_pid)/data/
+    

@@ -1,0 +1,13 @@
+<launch>
+
+    <node pkg="long_pid" type="long_pid" name="longitudinal_pid" output="log">
+        <rosparam file="$(find long_pid)/params/long.yaml" subst_value="True"/>
+    </node>
+
+    <rosparam param="mission" ns="longitudinal_pid">3</rosparam>
+    <rosparam param="TROflag" ns="longitudinal_pid">false</rosparam>
+
+    <node name="dyn_recfg_load_pid" pkg="dynamic_reconfigure" type="dynparam" 
+          args="load /longitudinal_pid $(find long_pid)/params/dyn_accel.yaml" />
+
+</launch>

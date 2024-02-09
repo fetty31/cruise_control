@@ -1,0 +1,47 @@
+!!python/object/new:dynamic_reconfigure.encoding.Config
+dictitems:
+  Ax_acc_max: 2.0
+  Ax_dec_max: 2.0
+  Ay_max: 2.0
+  Kd: 0.0
+  Ki: 0.1
+  Kp: 1.0
+  TrqLimited: true
+  Vx_final: 4.0
+  Vx_max: 15.0
+  Vx_min: 2.0
+  groups: !!python/object/new:dynamic_reconfigure.encoding.Config
+    dictitems:
+      Ax_acc_max: 2.0
+      Ax_dec_max: 2.0
+      Ay_max: 2.0
+      Kd: 0.0
+      Ki: 0.1
+      Kp: 1.0
+      TrqLimited: true
+      Vx_final: 4.0
+      Vx_max: 15.0
+      Vx_min: 2.0
+      groups: !!python/object/new:dynamic_reconfigure.encoding.Config
+        state: []
+      id: 0
+      lastApex: true
+      latency: 4
+      lluisrho: 1.0
+      minDist: 10.0
+      name: Default
+      parameters: !!python/object/new:dynamic_reconfigure.encoding.Config
+        state: []
+      parent: 0
+      spatialFlag: false
+      state: true
+      troProfileMU: 0.8
+      type: ''
+    state: []
+  lastApex: true
+  latency: 4
+  lluisrho: 1.0
+  minDist: 10.0
+  spatialFlag: false
+  troProfileMU: 0.8
+state: []
